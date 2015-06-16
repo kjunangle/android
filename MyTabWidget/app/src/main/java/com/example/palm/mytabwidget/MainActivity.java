@@ -1,17 +1,41 @@
 package com.example.palm.mytabwidget;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TabHost;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
+        tabHost.setup();
+        TabHost.TabSpec tabSpec = tabHost.newTabSpec("Tab1");
+
+        tabSpec.setContent(R.id.tab1);
+        tabSpec.setIndicator("Home");
+        tabHost.addTab(tabSpec);
+
+        tabSpec=tabHost.newTabSpec("tab2");
+        tabSpec.setContent(R.id.tab2);
+        tabSpec.setIndicator("Setting");
+        tabHost.addTab(tabSpec);
+
+        tabSpec=tabHost.newTabSpec("tab3");
+        tabSpec.setContent(R.id.tab3);
+        //tabSpec.setContent(new Intent(this,MyActivity.class));
+        tabSpec.setIndicator("About", getResources().getDrawable(android.R.drawable.ic_dialog_info));
+        tabHost.addTab(tabSpec);
+
+
     }
 
     @Override
