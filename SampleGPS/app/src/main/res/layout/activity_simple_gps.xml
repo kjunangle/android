@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/bt_traffic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Traffic Off"
+            android:textOn="Traffic On" />
+
+        <ToggleButton
+            android:id="@+id/bt_satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Satellite Off"
+            android:textOn="Satellite On" />
+    </LinearLayout>
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:enabled="true"
+        android:clickable="true"
+        android:apiKey="0KIUNVPuORyQkzztgYtEn3lsS997LA2WOwZIOuA"
+        />
+
+
+</LinearLayout>

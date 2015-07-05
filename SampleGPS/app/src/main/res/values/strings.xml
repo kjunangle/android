@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SampleGPS</string>
+    <string name="title_activity_simple_gps">Map</string>
+</resources>

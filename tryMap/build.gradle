@@ -1,0 +1,18 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        compile 'com.google.android.gms:play-services:7.5.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
